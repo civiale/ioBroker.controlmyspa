@@ -1,0 +1,34 @@
+{
+  "i18n": false,
+  "type": "panel",
+  "items": {
+    "_hdr": {
+      "type": "header",
+      "text": "ControlMySpa-Konto",
+      "size": 3
+    },
+    "email": {
+      "type": "text",
+      "label": "E-Mail",
+      "help": "Gleiche Zugangsdaten wie in der ControlMySpa-App",
+      "xs": 12, "sm": 12, "md": 6, "lg": 4
+    },
+    "password": {
+      "type": "password",
+      "label": "Passwort",
+      "repeat": false,
+      "visible": true,
+      "newLine": true,
+      "xs": 12, "sm": 12, "md": 6, "lg": 4
+    },
+    "pollInterval": {
+      "type": "number",
+      "label": "Abfrageintervall (Sekunden)",
+      "help": "Minimum 30, empfohlen 120 – die Cloud drosselt bei zu häufigen Abfragen",
+      "min": 30,
+      "max": 3600,
+      "newLine": true,
+      "xs": 12, "sm": 12, "md": 6, "lg": 4
+    }
+  }
+}
