@@ -1,0 +1,59 @@
+{
+  "common": {
+    "name": "controlmyspa",
+    "version": "0.1.0",
+    "news": {
+      "0.1.0": { "en": "Initial version", "de": "Erste Version" }
+    },
+    "titleLang": { "en": "Balboa ControlMySpa", "de": "Balboa ControlMySpa" },
+    "desc": {
+      "en": "Control Balboa spas via the ControlMySpa cloud",
+      "de": "Balboa-Whirlpools über die ControlMySpa-Cloud steuern"
+    },
+    "authors": ["Alessandro"],
+    "keywords": ["balboa", "controlmyspa", "spa", "whirlpool"],
+    "license": "MIT",
+    "platform": "Javascript/Node.js",
+    "main": "main.js",
+    "icon": "controlmyspa.png",
+    "enabled": true,
+    "mode": "daemon",
+    "type": "climate-control",
+    "compact": true,
+    "connectionType": "cloud",
+    "dataSource": "poll",
+    "adminUI": { "config": "json" },
+    "tier": 3,
+    "dependencies": [{ "js-controller": ">=5.0.19" }],
+    "globalDependencies": [{ "admin": ">=6.13.16" }]
+  },
+  "native": {
+    "email": "",
+    "password": "",
+    "pollInterval": 120
+  },
+  "encryptedNative": ["password"],
+  "protectedNative": ["password"],
+  "objects": [],
+  "instanceObjects": [
+    {
+      "_id": "info",
+      "type": "channel",
+      "common": { "name": "Information" },
+      "native": {}
+    },
+    {
+      "_id": "info.connection",
+      "type": "state",
+      "common": {
+        "role": "indicator.connected",
+        "name": "Verbunden mit ControlMySpa-Cloud",
+        "type": "boolean",
+        "read": true,
+        "write": false,
+        "def": false
+      },
+      "native": {}
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "name": "iobroker.controlmyspa",
+  "version": "0.1.0",
+  "description": "Balboa ControlMySpa (CMS) Cloud-Anbindung für ioBroker",
+  "author": "Alessandro",
+  "license": "MIT",
+  "keywords": ["ioBroker", "balboa", "controlmyspa", "spa", "whirlpool", "hot tub"],
+  "main": "main.js",
+  "files": ["admin/", "lib/", "main.js", "io-package.json", "LICENSE", "README.md"],
+  "engines": { "node": ">=20" },
+  "dependencies": {
+    "@iobroker/adapter-core": "^3.2.3"
+  },
+  "scripts": {
+    "test": "node test/mockTest.js"
+  }
+}
