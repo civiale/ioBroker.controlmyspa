@@ -10,24 +10,21 @@ Balboa-Whirlpools mit **ControlMySpa** (CMS, z. B. Gateway Ultra 59303 / WLAN-Mo
 - Spa ist in der ControlMySpa-App eingerichtet und funktioniert dort
 - ioBroker mit js-controller ≥ 5, Node.js ≥ 20
 
-## Installation (ohne offizielles Repo)
+## Installation
 
-**Variante A – GitHub (privates oder öffentliches Repo)**
-1. Ordner als Repo `ioBroker.controlmyspa` auf GitHub pushen
-2. ioBroker Admin → Adapter → Symbol «Katze/GitHub» → «Benutzerdefiniert» → Repo-URL eintragen
-   (oder im Container: `iobroker url https://github.com/<user>/ioBroker.controlmyspa`)
-3. Instanz hinzufügen
+Der Adapter ist nicht im offiziellen ioBroker-Repository und wird direkt von GitHub installiert.
 
-**Variante B – Tarball direkt im Docker-Container**
-```bash
-# auf dem Rechner mit dem Quellcode
-npm pack                          # erzeugt iobroker.controlmyspa-0.1.0.tgz
-# Datei in ein Volume des ioBroker-Containers kopieren, dann im Container:
-cd /opt/iobroker
-npm install /pfad/iobroker.controlmyspa-0.1.0.tgz --omit=dev
-iobroker upload controlmyspa
-iobroker add controlmyspa
-```
+1. ioBroker Admin → **Adapter** → GitHub-Symbol «Aus eigener URL installieren»
+   (ggf. Expertenmodus aktivieren)
+2. Tab **Benutzerdefiniert** → URL eintragen:
+   `https://github.com/civiale/ioBroker.controlmyspa`
+3. **Installieren** und danach unter Adapter eine Instanz von «Balboa ControlMySpa» hinzufügen
+
+Alternativ im Container:
+`iobroker url https://github.com/civiale/ioBroker.controlmyspa`
+
+### Update
+Gleich wie die Installation: dieselbe URL erneut installieren. Die Konfiguration der Instanz bleibt erhalten.
 
 ## Konfiguration
 - E-Mail / Passwort des ControlMySpa-Kontos (Passwort wird verschlüsselt gespeichert)
